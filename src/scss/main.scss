@@ -5,10 +5,19 @@
 @use "base/reset";
 
 // Components
+@use "./components/scrollable";
 
 body {
   width: 100dvw;
-  background-color: variables.$white;
+  background-color: variables.$black;
   overflow-x: hidden;
   @include mixins.orbitron-font();
+  @include mixins.full-page();
+  color: variables.$white;
+}
+
+main {
+  @include mixins.full-page();
+  position: fixed;
+  background: red;
 }
