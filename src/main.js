@@ -12,4 +12,17 @@ for (let i = 0; i < 10; i++) {
   div.classList.add("image__container");
   let image = document.createElement("img");
   image.src = `./images/${i + 1}.jpeg`;
+  images.push(image);
+  div.style.gridRowStart = i + 1;
+
+  //add Overlay
+  let overlay = document.createElement("div");
+  overlay.classList.add("overlay");
+
+  let textDiv = document.createElement("div");
+  textDiv.innerHTML = "<h3>Lorem ipsum</h3>";
+  textDiv.style.gridRowStart = i + 1;
+
+  div.append(image, overlay);
+  imageGrid.append(div, textDiv);
 }
