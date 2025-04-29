@@ -22,7 +22,7 @@ for (let i = 0; i < 14; i++) {
   overlay.classList.add("overlay");
 
   let textDiv = document.createElement("div");
-  textDiv.innerHTML = "<h3>Lorem ipsum</h3>";
+  textDiv.innerHTML = "<h3>Art</h3> <h3> on</h3> <h3> X</h3>";
   textDiv.style.gridRowStart = i + 1;
 
   div.append(image, overlay);
@@ -31,13 +31,13 @@ for (let i = 0; i < 14; i++) {
   if (i % 2 == 1) {
     div.style.gridColumnStart = 1;
     div.style.gridColumnEnd = 1 + 7;
-    textDiv.style.gridColumnStart = 9;
-    textDiv.style.gridColumnEnd = 9 + 3;
+    textDiv.style.gridColumnStart = 12;
+    textDiv.style.gridColumnEnd = 12 + 1;
   } else {
     div.style.gridColumnStart = 6;
     div.style.gridColumnEnd = 6 + 7;
-    textDiv.style.gridColumnStart = 3;
-    textDiv.style.gridColumnEnd = 3 + 6;
+    textDiv.style.gridColumnStart = 1;
+    textDiv.style.gridColumnEnd = 1 + 2;
   }
 
   createPixels(div);

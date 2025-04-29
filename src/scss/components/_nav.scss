@@ -1,0 +1,26 @@
+@use "../abstract/mixins";
+
+nav {
+  @include mixins.flex-center(space-between);
+  padding: 10px 20px;
+
+  @media (max-width: 720px) {
+    padding: 5px 10px;
+  }
+
+  .logo {
+    font-size: 2rem;
+
+    @media (max-width: 720px) {
+      font-size: 1rem;
+    }
+  }
+
+  .menu {
+    font-size: 1.5rem;
+
+    @media (max-width: 720px) {
+      font-size: 0.5rem;
+    }
+  }
+}
