@@ -27,14 +27,28 @@ for (let i = 0; i < 10; i++) {
   imageGrid.append(div, textDiv);
 
   if (i % 2 == 1) {
-    div.style.gridColumnStart = 2;
-    div.style.gridColumnEnd = 2 + 5;
+    div.style.gridColumnStart = 1;
+    div.style.gridColumnEnd = 1 + 5;
     textDiv.style.gridColumnStart = 8;
     textDiv.style.gridColumnEnd = 8 + 5;
   } else {
     div.style.gridColumnStart = 8;
     div.style.gridColumnEnd = 8 + 5;
-    textDiv.style.gridColumnStart = 2;
-    textDiv.style.gridColumnEnd = 2 + 5;
+    textDiv.style.gridColumnStart = 1;
+    textDiv.style.gridColumnEnd = 1 + 5;
+  }
+  createPixels(div);
+}
+
+function createPixels(image) {
+  let { width, height } = image.getBoundingClientRect();
+  for (let x = 0; x < width; x += 20) {
+    for (let y = 0; y < height; y += 20) {
+      let imagePixel = document.createElement("div");
+      imagePixel.className = "pixel";
+      imagePixel.style.left = x + "px";
+      imagePixel.style.top = y + "px";
+      image.append(imagePixel);
+    }
   }
 }
