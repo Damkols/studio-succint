@@ -2,7 +2,11 @@
 
 main {
   @include mixins.flex-center();
-  padding: 100px;
+  padding: 150px;
+
+  @media (max-width: 720px) {
+    padding: 10px;
+  }
 }
 
 .image__grid {
@@ -10,7 +14,7 @@ main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 .image__container {
@@ -28,12 +32,13 @@ img {
   height: 140%;
   object-fit: cover;
   object-position: center;
+  // border: 2px solid black;
 }
 
 .overlay {
   position: absolute;
   inset: 0;
-  background-color: rgb(255, 64, 0);
+  // background-color: ;
   z-index: 1;
   mix-blend-mode: screen;
 }
@@ -46,7 +51,7 @@ img {
   transition: 1s;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.627);
+    background-color: #fe11c4;
     transition: 0s;
   }
 }

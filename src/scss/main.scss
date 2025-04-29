@@ -10,7 +10,7 @@
 body {
   width: 100dvw;
   height: 100%;
-  background-color: variables.$black;
+  background-color: #fe11c4;
   overflow: auto;
   @include mixins.orbitron-font();
   @include mixins.full-page();

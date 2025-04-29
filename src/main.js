@@ -10,16 +10,14 @@ let images = [];
 let currentY = 0;
 let targetY = 0;
 
-// Add images
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 14; i++) {
   let div = document.createElement("div");
   div.classList.add("image__container");
   let image = document.createElement("img");
-  image.src = `./images/${i + 1}.jpeg`;
+  image.src = `/images/${i + 1}.jpeg`;
   images.push(image);
   div.style.gridRowStart = i + 1;
 
-  //add Overlay
   let overlay = document.createElement("div");
   overlay.classList.add("overlay");
 
@@ -32,15 +30,16 @@ for (let i = 0; i < 10; i++) {
 
   if (i % 2 == 1) {
     div.style.gridColumnStart = 1;
-    div.style.gridColumnEnd = 1 + 5;
-    textDiv.style.gridColumnStart = 8;
-    textDiv.style.gridColumnEnd = 8 + 5;
+    div.style.gridColumnEnd = 1 + 7;
+    textDiv.style.gridColumnStart = 9;
+    textDiv.style.gridColumnEnd = 9 + 3;
   } else {
-    div.style.gridColumnStart = 8;
-    div.style.gridColumnEnd = 8 + 5;
-    textDiv.style.gridColumnStart = 1;
-    textDiv.style.gridColumnEnd = 1 + 5;
+    div.style.gridColumnStart = 6;
+    div.style.gridColumnEnd = 6 + 7;
+    textDiv.style.gridColumnStart = 3;
+    textDiv.style.gridColumnEnd = 3 + 6;
   }
+
   createPixels(div);
 }
 
