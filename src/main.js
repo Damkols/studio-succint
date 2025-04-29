@@ -4,11 +4,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 const imageGrid = document.querySelector(".image__grid");
-const scrollable = document.querySelector(".scrollable");
 let images = [];
-
-let currentY = 0;
-let targetY = 0;
 
 for (let i = 0; i < 14; i++) {
   let div = document.createElement("div");
@@ -63,7 +59,7 @@ const lenis = new Lenis({
   smooth: true,
   direction: "vertical",
   gestureDirection: "vertical",
-  smoothTouch: false,
+  smoothTouch: true,
 });
 
 lenis.on("scroll", ScrollTrigger.update);
@@ -73,3 +69,5 @@ gsap.ticker.add((time) => {
 });
 
 gsap.ticker.lagSmoothing;
+
+ScrollTrigger.refresh();
