@@ -1,0 +1,13 @@
+@use "abstract/variables";
+@use "abstract/mixins";
+
+// Base
+@use "base/reset";
+
+// Components
+
+body {
+  width: 100dvw;
+  background-color: variables.$white;
+  overflow-x: hidden;
+}
