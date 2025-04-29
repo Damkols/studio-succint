@@ -25,4 +25,16 @@ for (let i = 0; i < 10; i++) {
 
   div.append(image, overlay);
   imageGrid.append(div, textDiv);
+
+  if (i % 2 == 1) {
+    div.style.gridColumnStart = 2;
+    div.style.gridColumnEnd = 2 + 5;
+    textDiv.style.gridColumnStart = 8;
+    textDiv.style.gridColumnEnd = 8 + 5;
+  } else {
+    div.style.gridColumnStart = 8;
+    div.style.gridColumnEnd = 8 + 5;
+    textDiv.style.gridColumnStart = 2;
+    textDiv.style.gridColumnEnd = 2 + 5;
+  }
 }
