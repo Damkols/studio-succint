@@ -1,10 +1,14 @@
 import "./scss/main.scss";
+import Lenis from "lenis";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
 const imageGrid = document.querySelector(".image__grid");
 const scrollable = document.querySelector(".scrollable");
 let images = [];
 
 let currentY = 0;
-let currentX = 0;
+let targetY = 0;
 
 // Add images
 for (let i = 0; i < 10; i++) {
@@ -52,3 +56,21 @@ function createPixels(image) {
     }
   }
 }
+
+gsap.registerPlugin(ScrollTrigger);
+
+const lenis = new Lenis({
+  duration: 1.2,
+  smooth: true,
+  direction: "vertical",
+  gestureDirection: "vertical",
+  smoothTouch: false,
+});
+
+lenis.on("scroll", ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing;

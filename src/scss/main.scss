@@ -9,15 +9,10 @@
 
 body {
   width: 100dvw;
+  height: 100%;
   background-color: variables.$black;
-  overflow-x: hidden;
+  overflow: auto;
   @include mixins.orbitron-font();
   @include mixins.full-page();
   color: variables.$white;
-}
-
-main {
-  @include mixins.full-page();
-  position: fixed;
-  background: red;
 }
