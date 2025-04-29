@@ -1,4 +1,5 @@
 @use "./variables";
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 
 @mixin full-page() {
   position: relative;
@@ -18,4 +19,11 @@
   display: flex;
   justify-content: $jc;
   align-items: center;
+}
+
+@mixin orbitron-font($fw: 400) {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: $fw;
+  font-style: normal;
 }

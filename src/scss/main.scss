@@ -10,4 +10,5 @@ body {
   width: 100dvw;
   background-color: variables.$white;
   overflow-x: hidden;
+  @include mixins.orbitron-font();
 }
